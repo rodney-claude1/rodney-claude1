@@ -88,9 +88,9 @@ Once you click on the cat icon to sign in to Cloud9 using GitHub, you will event
 
 ### Creating a New GitHub Repo For Your Site
 
-Now that you're signed into GitHub and have signed into Cloud9 through GitHub (make sure you're signed into Cloud9 with GitHub), the next step is to create a new repository on GitHub.
+<a href="https://github.com/new" target="_blank">Click here to open a new browser tab and create create a new GitHub repository</a>.
 
-GitHub will host a website for each user and organization for free.  The feature is called <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+GitHub will host a website for each user and organization for free.  The feature is called <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. To use this we must create a "folder" for our code called a _repository_.
 
 The first thing we need to do is create a new repository on GitHub and name it using the following naming pattern:
 
@@ -98,15 +98,13 @@ The first thing we need to do is create a new repository on GitHub and name it u
     
 Follow these steps and see the screenshot to create a new repository, but NOTE: If you're not signed-in to GitHub, you might see a web page that says 404 (This is not the web page you are looking for).  Just sign-in to GitHub on this page and you will be forward to the _create new repository_ page.
 
-<a href="https://github.com/new" target="_blank">Click here to open a new browser tab and create create a new GitHub repository</a>.
-    
 <ol style="list-style-type: upper-alpha;">
-    <li>On the Create New Repository page, in the box for **Repository name**, name the repository like `your-github-username.github.io`, replacing `your-github-username` with you actual GitHub username.  MAKE SURE your username is spelled correctly, otherwise you'll have problems **(See A)**.</li>
-    <li>Enter a description for your repository in the **Description** box, like `My own awesome website!' **(See B)**.</li>
-    <li>Select the Public radio button to allow anyone to see this repository **(See C)**.</li>
-    <li>Check the "Initialize this repository with a README" box **(See D)**.</li>
-    <li>Click the "Add .gitignore" button, and select "Node" from the dropdown.  Here, we're just selecting Node because it gives us some default ignore patterns... we'll explain later **(See E)**.</li>
-    <li>Click "Create Repository" **(See F)**.</li>
+    <li>On the Create New Repository page, in the box for <strong>Repository name</strong>, name the repository like `your-github-username.github.io`, replacing `your-github-username` with you actual GitHub username.  MAKE SURE your username is spelled correctly, otherwise you'll have problems <strong>(See A)</strong>.</li>
+    <li>Enter a description for your repository in the <strong>Description</strong> box, like `My own awesome website!' <strong>(See B)</strong>.</li>
+    <li>Select the Public radio button to allow anyone to see this repository <strong>(See C)</strong>.</li>
+    <li>Check the "Initialize this repository with a README" box <strong>(See D)</strong>.</li>
+    <li>Click the "Add .gitignore" button, and select "Node" from the dropdown.  Here, we're just selecting Node because it gives us some default ignore patterns... we'll explain later <strong>(See E)</strong>.</li>
+    <li>Click "Create Repository" <strong>(See F)</strong>.</li>
 </ol>
 
 **Click to enlarge image**
@@ -116,9 +114,9 @@ Awesome, you created your repository!
 
 ### Creating a Cloud9 Workspace for our Website Project
 
-GitHub is where we store and version our code. Cloud9 is where we edit our code.  Cloud9 is web-based set of tools for creating software.  By working in the cloud, our projects workspace is independent from any one computer.  Plus, no matter what operating system you're using, Cloud9 gives us access to Linux, which is preferable for this course.
+Cloud9 is web-based set of tools for creating software.  By working in the cloud, our projects workspace is accessible from any computer on the internet!
 
-1.  Next step, we need to _clone_ our repository into our Cloud9 workspace, where we will do our work.  After creating the repository on GitHub, you'll be brought to the repository's default view.  In the top right corner of the screen, you will want to:
+1. We need to _clone_ our **Github** repository into our Cloud9 workspace, where we will do our work.  After creating the repository on GitHub, you'll be brought to the repository's default view.  **On github.com** you will want to:
     
     A) Click Clone or download (See A). Make sure that "Clone with SSH" appears in the top right corner of the dropdown box. PLEASE NOTE: THIS STEP IS IMPORTANT! Make sure Clone with SSH is selected! IF it is not, an option to select it should appear in the top right corner of the dropdown box.
     
@@ -224,14 +222,18 @@ Above, you'll see this pattern often - notice that we have one `<div>` tag with 
 
 ### TODO 2 : Add the DOCTYPE
 
-You need to tell the browser you're writing an HTML page by adding the following at the top:
+You need to tell the browser you're writing an HTML page which we do by adding the following:
 
 ````HTML
 <!DOCTYPE html>
+<html>
+  <!-- ALL HTML GOES HERE -->
+</html>
 ````
+
 ### TODO 3 : Add HTML Tags Required For a Webpage
 
-If you're not familiar with the basic tags needed for the structure of an HTML page, you'll want to memorize them:  Let's add our `<html>` tags with `<head>` and `<body>` tags nested within.
+If you're not familiar with the basic tags needed for the structure of an HTML page, you'll want to memorize them:  `<!DOCTYPE>`, `<html>`, `<head>`, `<body>` Let's add our  tags with `<head>` and `<body>` tags nested within.
 
 Like this: 
 
@@ -239,20 +241,23 @@ Like this:
 <!DOCTYPE HTML>
 <html>
     <head>
+        <!-- METADATA --> 
     </head>
     
     <body>
+        <!-- CONTENT -->
     </body>
 </html>
 ````
 
-At least for now, every HTML page contains the DOCTYPE, html, head and body tags.  The `<!DOCTYPE HTML>` tag tells the browser you want to render the document using the most recent version of HTML.  The opening and closing tags of `<html></html>` wrap our html page, but are in fact somewhat redundant.
+These two tag sets make up the two sections of any well formed HTML page: 
 
-The next two tag sets make up the two sections of any well formed HTML page: The `<head></head>` tag represents metadata for a webpage, that is, information about the web page used by the browser, providing extra information about the webpage, but is not content.  This is similar to the information on the outside of a postal envelope - the to and from address, the stamp, the processing stamp from the post office - information important to the delivery of the letter, but _nothing_ to do with the _content_ of the letter.
+- The `<head></head>` tag represents metadata for a webpage, that is, information about the web page used by the browser, providing extra information about the webpage, **but is not content**.  
 
-Finally, every page has a `<body></body>` tag, and it is between the body tag that all visible content will be placed.  That's right, all content you want to show to the user will be children of the `<body>`, so pay careful attention to ensure that when you're adding navigation, paragraphs and images tags, you're doing so within the `<body>` tag.
+- Every page has `<body></body>` tags, and it is between the body tag that all **visible content** will be placed.
 
-Ok then, we made the structure of the site so now we need some content! Give your site a title.
+We can compare these two tags to a letter being sent in the mail. The `<head>` tags contain the information on the outside of a postal envelope - the to and from address, the stamp, etc... - information important to the delivery of the letter, but _nothing_ to do with the _content_ of the letter. Meanwhile, the `<body>` tags contain the _content_ of the letter - or, the actual letter.
+
 
 ### TODO 4 : Add a Title
 
