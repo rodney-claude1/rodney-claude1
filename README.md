@@ -252,7 +252,7 @@ Like this:
 
 These two tag sets make up the two sections of any well formed HTML page: 
 
-- The `<head></head>` tag represents metadata for a webpage, that is, information about the web page used by the browser, providing extra information about the webpage, **but is not content**.  
+- The `<head></head>` tag represents **metadata** for a webpage, that is, information about the web page used by the browser, providing extra information about the webpage, **but is not content**.  
 
 - Every page has `<body></body>` tags, and it is between the body tag that all **visible content** will be placed.
 
@@ -267,7 +267,7 @@ The `<title>` tag of a webpage belongs inside of the `<head>` tag. So go ahead a
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Sheba's Amazing Website</title>
+        <title>HalleBot's Amazing Website</title>
     </head>
     
     <body>
@@ -330,58 +330,6 @@ Add the following tags inside of the `<div class="content">` tag:
 * Create a `<header>` element and put your name inside of it.
 * Below that make a `<p>` element and inside it put your position or job title such as "Student at XYZ High."
 
-## Serve Your Website
-
-It's now time to serve your website like a pro, so we can preview it as if looking at it live on the web, only, we won't be _live_ yet, we'll be serving from our Cloud9 workspace.  The public won't really be able to see it yet, not really - we'll push our website live to GitHub in a later step so the public can see it, but for now, we're serving in development mode.
-
-With the index.html tab selected in the editor (see A), you can simply press the green `Run` button (see B).
-
-This will start an Apache web server in a new tab of the Console View, the bottom window pane of the Cloud9 IDE. Once Apache has booted, you can click the URL `https://myusername-github-io-myusername.c9.io/index.html (see C) - this will open a new tab with the appliation running.
-
-<img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/c9-serve-website.png">
-
-Once this tab opens, we recommend popping out the tab into Chrome, into a separate browser tab. To do so, click on the popout button on the right side of the preview tab (see A), like so:
-
-<img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/c9-pop-out-website-tab.png">
-
-This will give you the website running in a separate Chrome browser tab, like this:
-
-<img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/c9-working-in-tabs.png">
-
-You'll notice above, we have two tabs open in Chrome now - one running your website (the tab that current has focus), and the other tab, (the one with the blue Cloud9 icon) is your Cloud9 workspace.  So to continue working, switch to your workspace tab, code a little, save your changes, then switch back to the website tab, and refresh.
-
-As you save your future work, changes to your code will be reflected in your website - **you don't have to press "Run" again, and shouldn't** - as long as the Apache web server is still running - you need only to switch back to the tab running your website, and only press the refresh button on the Chrome tab with the  running in it.  
-
-## Serve Only the index Page
-
-Be careful not to open too many processes in Cloud9.  Cloud9 is a powerful set of tools, and it's easy to feel a little overwhelmed by all the menus and buttons. We want you to start using industrial tools, and it will benefit you to watch some YouTube videos on "getting started with Cloud9" to learn more about how to use Cloud9.
-
-For our purposes, and in the short term, you need only follow the above steps to serve the index.html file of your website, once.  Doing so will open up a process in its own tab in the Console View.  This process is an Apache web server that is serving up your `index.html`.
-
-`index.html` is the default web page returned when we ask a web browser to fetch a URL that does not explicit request a particular file. So a URL like "www.google.com" will fetch "www.google.com/index.html".
-
-Again, once your Apache webserver is running and serving up your `index.html` file, your Console View should include only a maximum of three tabs, your **bash terminal**, perhaps an **immediate JavaScript** tab, and **Apache** serving up your `index.html` file.  In other words, the Console View should look like this:
-
-<img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/c9-serve-index-only.png">
-
-Sometimes, while students are working in other files, they might accidentally press Run again, and Cloud9 will start another process, run another instance of an Apache web server, and serve that file.  This is unnecessary, and undesirable. You should only need to be running one web server, that is, one instance of Apache serving your index.html file.
-
-If you find yourself with more than 3 tabs open, stop the extra processes by selecting their tab, pressing the red `Stop` button, then click the `x` to close the unnecessary tab.  Here's a shot of too many files being served:
-
-<img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/c9-serving-too-many-files.png">
-
-Above, you're serving both the index.html file in tab 3 _and_ serving the portfolio.html file in tab 4.  Here, you'd want to stop serving in tab 4, and close it.
-
-You need only serve index.html - from there, you can get to any part of your website.
-
-Finally, if for some reason your Apache web server stops, which might happen if you do not revisit your workspace for several days, you need only press the green Run button on the Console View tab where Apache has stopped, like so:
-
-<img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/c9-apache-restart.png">
-
-In the above image, notice the tab says "index.html - Idle" - this means the process, Apache is idle and not running.  So here, you'd just press the green Run button to restart your Apache server.
-
-Don't worry if this feels very new to you - it is, but you'll get use to it.
-
 ### TODO 8 : Add an Image and List 
 
 * Inside of the `<div class="sidebar">` tag, add an `<img>` tag. More on image tags [here](http://www.w3schools.com/tags/tag_img.asp).
@@ -394,7 +342,7 @@ So, your full image tag should look this this:
 ````HTML
                 <div class="sidebar">
 
-                    <img src="http://www.adweek.com/tvspy/files/2013/08/turk2_cropped.jpg">
+                    <img src="https://pbs.twimg.com/media/DHM2stzUMAAySpT.jpg">
                 </div>
 ````
 
@@ -451,7 +399,7 @@ Like this:
 
 ````HTML
             <nav>
-                <header>Sheba's Glorious Website</header>
+                <header>HalleBot's Glorious Website</header>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
@@ -479,7 +427,7 @@ Copy the entire below section and place it inside the `<head>` below the `<title
                 font-size: 1.5em;
                 font-weight: bold;
             }
-            [id=all-contents] {
+            #all-contents {
                 max-width: 800px;
                 margin: auto;
             }
@@ -514,18 +462,18 @@ Copy the entire below section and place it inside the `<head>` below the `<title
                 background: rgb(245, 238, 219);
                 display: flex;
             }
-            [class=sidebar] {
+            .sidebar {
                 margin-right: 25px;
                 padding: 10px;
             }
-            [class=sidebar] img {
+            .sidebar img {
                 width: 200px;
             }
-            [class=content] {
+            .content {
                 flex: 1;
                 padding: 15px;
             }
-            [class=interests] header {
+            .interests header {
                 font-size: 1.25em;
             }
         </style>
