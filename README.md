@@ -84,7 +84,7 @@ We are building a website, to be viewed live on the web at your GitHub page, and
 
 <img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/c9-signin-github.png">
 
-Once you click on the cat icon to sign in to Cloud9 using GitHub, you will eventually be taken to a temporary webpage on GitHub. On this page, GitHub will ask you to authorize Cloud9 to use your account. Click the green authorize button to move forward. You will then be returned to Cloud9.
+Once you click on the cat icon to sign in to Cloud9 using GitHub, you will eventually be taken to a temporary webpage on GitHub. On this page, GitHub will ask you to **authorize Cloud9** to use your account. Click the green authorize button to move forward. You will then be returned to Cloud9.
 
 ### Creating a New GitHub Repo For Your Site
 
@@ -96,7 +96,7 @@ The first thing we need to do is create a new repository on GitHub and name it u
 
     yourusername.github.io
     
-Follow these steps and see the screenshot to create a new repository, but NOTE: If you're not signed-in to GitHub, you might see a web page that says 404 (This is not the web page you are looking for).  Just sign-in to GitHub on this page and you will be forward to the _create new repository_ page.
+Follow these steps and see the screenshot below to create a new repository, but NOTE: If you're not signed-in to GitHub, you might see a web page that says 404 (This is not the web page you are looking for).  Just sign-in to GitHub on this page and you will be forward to the _create new repository_ page.
 
 <ol style="list-style-type: upper-alpha;">
     <li>On the Create New Repository page, in the box for <strong>Repository name</strong>, name the repository like `your-github-username.github.io`, replacing `your-github-username` with you actual GitHub username.  MAKE SURE your username is spelled correctly, otherwise you'll have problems <strong>(See A)</strong>.</li>
@@ -157,25 +157,7 @@ When the workspace loads, you'll see something like this:
 
 Awesome, we're ready to create our website!
 
-## Lesson Steps
-
-### TODO 1 : Create index.html
-
-Right-click in the file system and select `New File`
-
-<img src="https://raw.githubusercontent.com/OperationSpark/first-website/master/img/create-new-file.png">
-
-Name the file, `index.html`, (press return after naming it to save the new name) like so:
-
-<img src="https://raw.githubusercontent.com/OperationSpark/first-website/master/img/name-it-index.png">
-
-Next, double click the `index.html` file to open it so we can begin editing the file, like so:
-
-<img src="https://raw.githubusercontent.com/OperationSpark/first-website/master/img/open-index-html.png">
-
-Ok great!  We've created our `index.html` file and opened it in the text editor to start developing our website!
-
-#### The Big 3
+## The Big 3
 
 There's really three parts at play in a webpage:
 
@@ -220,6 +202,24 @@ Also note that HTML tags are hierarchical, and **need to be indented to illustra
 
 Above, you'll see this pattern often - notice that we have one `<div>` tag with an id attribute of `content`, and inside this tag, we have two other `<div>` tags, one for a sidebar and one for a main section of the page.  The _content_ `<div>` is the parent of both the _sidebar_ and _main_ `<div>`, while _sidebar_ and _main_ are siblings.  Notice the indentation - this is extremely important as it clearly and visually spells out these hierarchical relationship.  Indentation and relationships of tags (and code blocks) are the things newcomers struggle with the most! Be vigilant here!
 
+## Lesson Steps
+
+### TODO 1 : Create index.html
+
+Right-click in the file system and select `New File`
+
+<img src="https://raw.githubusercontent.com/OperationSpark/first-website/master/img/create-new-file.png">
+
+Name the file, `index.html`, (press return after naming it to save the new name) like so:
+
+<img src="https://raw.githubusercontent.com/OperationSpark/first-website/master/img/name-it-index.png">
+
+Next, double click the `index.html` file to open it so we can begin editing the file, like so:
+
+<img src="https://raw.githubusercontent.com/OperationSpark/first-website/master/img/open-index-html.png">
+
+Ok great!  We've created our `index.html` file and opened it in the text editor to start developing our website!
+
 ### TODO 2 : Add the DOCTYPE
 
 You need to tell the browser you're writing an HTML page which we do by adding the following:
@@ -233,30 +233,30 @@ You need to tell the browser you're writing an HTML page which we do by adding t
 
 ### TODO 3 : Add HTML Tags Required For a Webpage
 
-If you're not familiar with the basic tags needed for the structure of an HTML page, you'll want to memorize them:  `<!DOCTYPE>`, `<html>`, `<head>`, `<body>` Let's add our  tags with `<head>` and `<body>` tags nested within.
+If you're not familiar with the basic tags needed for the structure of an HTML page, you'll want to memorize them. Let's add our `<head>` and `<body>` tags nested within `<html>`. 
 
-Like this: 
+Your entire file should look like this: 
 
 ````HTML
 <!DOCTYPE HTML>
 <html>
     <head>
-        <!-- METADATA --> 
+        <!-- METADATA TAGS --> 
     </head>
     
     <body>
-        <!-- CONTENT -->
+        <!-- CONTENT TAGS-->
     </body>
 </html>
 ````
 
 These two tag sets make up the two sections of any well formed HTML page: 
 
-- The `<head></head>` tag represents **metadata** for a webpage, that is, information about the web page used by the browser, providing extra information about the webpage, **but is not content**.  
+- The `<head></head>` tag contains **metadata** for a webpage, that is, information _about_ the web page used by the browser, **but is not content**.  
 
-- Every page has `<body></body>` tags, and it is between the body tag that all **visible content** will be placed.
+- Every page has `<body></body>` tags, and it is between the body tags that all **visible content** will be placed (pictures, text, links, etc...).
 
-We can compare these two tags to a letter being sent in the mail. The `<head>` tags contain the information on the outside of a postal envelope - the to and from address, the stamp, etc... - information important to the delivery of the letter, but _nothing_ to do with the _content_ of the letter. Meanwhile, the `<body>` tags contain the _content_ of the letter - or, the actual letter.
+We can compare the `head` and the `body` tags to a letter being sent in the mail. The `<head>` tags contain the information on the outside of a postal envelope - the to and from address, the stamp, etc... This is information important to the delivery of the letter, but _nothing_ to do with the _content_ of the letter. Meanwhile, the `<body>` tags contain the _content_ of the letter - the actual letter.
 
 
 ### TODO 4 : Add a Title
@@ -285,7 +285,7 @@ The `<title>` tag of a webpage belongs inside of the `<head>` tag. So go ahead a
 </body>
 ```
 
-We're going to create `<div>` tags to group our content together.  The `<div>` tag stand for _document division_, and they are special tags that help us divide or group together content on our web page.  You can consider them sort of like containers, into which we group content, and those containers can be invisible or _styled_ with visible properties, like a background color, a border, etc.
+The `<div>` tag stands for _document division_, and they are special tags that help us **group together** content on our web page. 
 
 Go ahead and add the following structure, so that your `<body>` looks like this:
 
@@ -293,17 +293,19 @@ Go ahead and add the following structure, so that your `<body>` looks like this:
     <body>
         <div id="all-contents"> 
             <nav>
+            
             </nav>
             
             <main>
+            
             </main>
         </div>
     </body>
 ```
 
-So, to start grouping together our content in a meaningful way, inside the `<body>` tag, we created a new document division using the `<div>` tag.  This is going to contain all the site content so we annotated it as such by setting its _id_ attribute to `id="all-contents"`.  Attributes are properties that tell us something more specialized about the tag, and you'll come to understand how these work as you work more with HTML.
+To start grouping together our content in a meaningful way, inside the `<body>` tag, we created a new document division using the `<div>` tag.  This is going to contain all the site content so we annotated it as such by setting its _id_ attribute to `id="all-contents"`.  Attributes are properties that tell us something more specialized about the tag, and you'll come to understand how these work as you work more with HTML.
 
-In particular, the `id` attribute allows us to _uniquely_ identify an HTML element in our webpage. Technically speaking, when giving an id to an element, this id _should be_ unique within the page - no two elements should share the same id in the same webpage, and this is an important distinction.
+The `id` attribute allows us to _uniquely_ identify an HTML element in our webpage. `<div>` tags will often have an `id` attribute to distinguish it from other divs.
 
 Finally, inside our _all-contents_ div, we're going to put the site navigation menu and the main content of our site, so we created opening and closing tags for `<nav>` and `<main>`.
 
@@ -314,9 +316,11 @@ Inside the `<main>` element, create two new `<div>` elements. These will act as 
 ```HTML
             <main>
                 <div class="sidebar">
+                
                 </div>
     
                 <div class="content">
+                
                 </div>
             </main>
 ```
@@ -330,10 +334,12 @@ Add the following tags inside of the `<div class="content">` tag:
 * Create a `<header>` element and put your name inside of it.
 * Below that make a `<p>` element and inside it put your position or job title such as "Student at XYZ High."
 
+**Remember to add closing tags!**
+
 ### TODO 8 : Add an Image and List 
 
 * Inside of the `<div class="sidebar">` tag, add an `<img>` tag. More on image tags [here](http://www.w3schools.com/tags/tag_img.asp).
-* We need to add the URL of an actual image with the **src** attribute. Find an image you would like on your page, you can find an image of yourself from Facebook, or anything else using a Google image search. Right-click on the image, and choose 'Copy Image URL.'
+* `<img>` tags need an image to display which we provide with the **src** attribute. Find an image you would like on your page, you can find an image of yourself from Facebook, or anything else using a Google image search. Right-click on the image, and choose 'Copy Image URL.'
 * Paste that URL into the **src** attribute. 
 
 So, your full image tag should look this this:
@@ -341,7 +347,6 @@ So, your full image tag should look this this:
 
 ````HTML
                 <div class="sidebar">
-
                     <img src="https://pbs.twimg.com/media/DHM2stzUMAAySpT.jpg">
                 </div>
 ````
@@ -361,9 +366,9 @@ Let's create a section for your interests below the `<p>` tag (inside of the '[c
                     <section class="interests">
                         <header>Interests</header>
                         <ul>
-                            <li>Thing 1</li>
-                            <li>Thing 2</li>
-                            <li>Thing 3</li>
+                            <li>Interest 1</li>
+                            <li>Interest 2</li>
+                            <li>Interest 3</li>
                         </ul>
                     </section>
 ````
@@ -376,26 +381,21 @@ Should look something like this:
 
 ### TODO 10 : Navigation and Site Title
 
-We're going to make a menu. Linking to other pages forms the foundation of the web. Early on, the web was nothing but a bunch of HTML pages linked to one another. That's still true today although there's a lot more going on as well. We're going to link to a portfolio page and create it in the next lesson.
+Your site needs a title! Inside of the `<nav>` add an `<header>` and type your site's title in there.
 
-* Inside of the `<nav>` tag we created earlier create an unordered list using the `<ul>` tag. Inside it create two `<li>` tags to contain your list items
-* Create a link inside of each list item using the `<a>` tag. 
-* Finally give each menu item a name by inserting Home and Portfolio between the opening and closing tags.  See the example below.
+Like this:
 
 ````HTML
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                </ul>
+                <header>HalleBot's Glorious Website</header>
             </nav>
 ````
 
-Save and view your work. You now have some menu items! The *Home* link even works since it simply links to the page we are currently working on. The other link is for our portfolio page which we'll build out in the next lesson.
+Now, we're going to make a menu. Linking to other pages forms the foundation of the web. Early on, the web was nothing but a bunch of HTML pages linked to one another. That's still true today although there's a lot more going on as well. We're going to link to a portfolio page and create it in the next lesson.
 
-Your site needs a title! Inside of the `<nav>` before the `<ul>` tag add an `<header>` and type your site's title in there.
-
-Like this:
+* Inside of the `<nav>` tag and below the `<header>` we created earlier create an unordered list using the `<ul>` tag. Inside it create two `<li>` tags to contain your list items
+* Create a link inside of each list item using the `<a>` tag and setting the `href` attribute. 
+* Finally give each menu item a name by inserting Home and Portfolio between the opening and closing tags.  See the example below.
 
 ````HTML
             <nav>
@@ -406,6 +406,8 @@ Like this:
                 </ul>
             </nav>
 ````
+
+Save and view your work. You now have some menu items! The *Home* link even works since it simply links to the page we are currently working on. The other link is for our portfolio page which we'll build out in the next lesson.
 
 Save and view your work. You should see your title inside of the navbar to the left. 
 
@@ -485,9 +487,19 @@ Ok, we've pasted-in a bunch of style rules between the `<style></style>` tag, an
 
 CSS allows us to specify styling rules for our HTML elements.  When we say _elements_, we're talking about all the HTML tags within a webpage.  In best practice, we separate the content of an HTML document from the style or presentation of the content.  This allows us to change appearence without modifying content, allows styles to be better managed across multiple pages, and creates a cleaner code base.
 
-In order to style HTML elements, we need a way to _select_ the elements.
+#### Selecting HTML Elements by Tag Type
 
-#### Selecting HTML Elements by ID, Class, or by Tag Type
+**Selectors** and their **styling rules** tell the web browser which elements to select, and how to style them. Suppose we want all text in `<p>` tags to be blue? Or, we want `<nav>` to have a border? First we need to specifically _select_ those elements. 
+
+```CSS
+p {
+  color: blue;
+}
+```
+
+The above CSS uses the **CSS Selector** `p` to create a style rule for all `<p>` tags. The rule states that all elements with the tag `p` will have blue text. Selecting an element by its tag type will style all tags of that type. 
+
+#### Selecting HTML Elements by ID, Class, or by 
 
 When we create HTML elements, we can assign them an id or a class. In our HTML so far, we've given one element an id of _all-contents_ and another a class of _sidebar_. We did this by using the id and class attributes of the `<div>`. For example:
 
@@ -496,24 +508,17 @@ When we create HTML elements, we can assign them an id or a class. In our HTML s
     <div class="sidebar"></div>
 </div>
 ````
-By more concretely describing HTML elements by id or class, we can then select those elements by their id or class, and style them the way we like, and for this reason, the rules we specify in CSS are called _selectors_. We can also select elements by their tag type, as in, `body`, `p`, `h1`, `nav`.
+id and class are useful for labeling elements but they also allow us to be specific with styling based on these labels. By more specifically describing HTML elements with id or class, we can then select those elements by their id or class, and style them the way we like, and for this reason, the rules we specify in CSS are called _selectors_. We can also select elements by their tag type, as in, `body`, `p`, `h1`, `nav`.
 
-Selectors and their styling rules tell the web browser which elements to select, and how to style them.  In a moment, we are going to add some more style to our `<nav>` element, and by doing so using the `nav` selector, we are creating a style rule that will be applied to _all nav tags_ on our webpage.
+  In a moment, we are going to add some more style to our `<nav>` element, and by doing so using the `nav` selector, we are creating a style rule that will be applied to _all nav tags_ on our webpage.
 
-Selecting an element by id should only return one element, if your web page is well formed, so applying a style rule by id should only style one element on the page.
+`id`s are unique and selecting an element by id should only return one element, if your web page is well formatted, so applying a style rule by id should only style one element on the page.
 
 Selecting an element by its tag type or by its class will style all tags of that type, or all tags of that class.
 
-Finally, in our CSS, we've also shown you two ways to specify selectors, the long form, which is more explicit, and the short form. This is the long form of for an id selector:
+To style all elements that share the same tag we simply provide the name of the tag
 
-````CSS
-[id=all-contents] {
-    max-width: 800px;
-    margin: auto;
-}
-````
-
-However, the same selector can be spelled using the number symbol `#`, for id, like this:
+When we want to style an element with a unique `id` we use the CSS selector However, the same selector can be spelled using the number symbol `#`, for id, like this:
 
 ````CSS
 #all-contents {
