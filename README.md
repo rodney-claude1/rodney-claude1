@@ -82,7 +82,7 @@ We are building a website, to be viewed live on the web at your GitHub page, and
 1. Sign into GitHub: <a href="https://github.com/login" target="_blank">https://github.com/login</a>
 2. Sign into Cloud9 using GitHub: Always sign into Cloud9 using GitHub - this allows you to pair your code repositories at GitHub with your Cloub9 workspaces. <a href="https://c9.io/" target="_bank">Click this link, then look for the cat-icon on Cloud9</a>, as shown here (screens might look somewhat different - don't panic!): 
 
-<img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/c9-signin-github.png">
+<img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/c9-signin-github.png" width='270px'>
 
 Once you click on the cat icon to sign in to Cloud9 using GitHub, you will eventually be taken to a temporary webpage on GitHub. On this page, GitHub will ask you to **authorize Cloud9** to use your account. Click the green authorize button to move forward. You will then be returned to Cloud9.
 
@@ -167,7 +167,7 @@ There's really three parts at play in a webpage:
 
 #### HTML in 3 Minutes
 
-Very simply put, HTML is a set of text-tags that tell a web browser how to structure and identify the content of a web page. Developers _markup_ or _section off_ the structure and content of a webpage using HTML tags to _section off_ the parts of the page. Take a look at any webpage, and you'll see things like a header with some type of navigation, maybe a sidebar with more navigation options, and then headings, paragraph text, images and buttons.  All of these _page elements_ are marked as such using HTML tags.
+Very simply put, HTML is a set of text-tags that tell a web browser how to structure and identify the content of a web page. Developers create the structure and content of a webpage using HTML tags to _section off_ the parts of the page. Take a look at any webpage, and you'll see things like a header with some type of navigation, maybe a sidebar with more navigation options, and then headings, paragraph text, images and buttons.  All of these _page elements_ are marked as such using HTML tags.
 
 Before we start marking-up our webpage, here's a few things to note about HTML Tags:
 
@@ -179,7 +179,7 @@ Try to remember that most HTML tags have both an opening and closing tag.  So, w
 </div>
 ```
 
-Some HTML tags, like the `<img>` tag, do not require a closing tag, because they are not designed to hold content between the opening and closing tag.  The image tag specifies the source of the image it should display using what's called a tag _attribute_, which is a property of the tag, not content of the tag.  Check it out:
+Opening and closing tags allow tags to contain other tags. Some HTML tags, like the `<img>` tag, do not require a closing tag, because they are not designed to hold other content.  The image tag specifies the source of the image it should display using what's called a tag _attribute_, which is a property of the tag, not content of the tag.  Check it out:
 
 ```HTML
 <img src="path/to/my-image.jpg">
@@ -200,7 +200,9 @@ Also note that HTML tags are hierarchical, and **need to be indented to illustra
 </div>
 ```
 
-Above, you'll see this pattern often - notice that we have one `<div>` tag with an id attribute of `content`, and inside this tag, we have two other `<div>` tags, one for a sidebar and one for a main section of the page.  The _content_ `<div>` is the parent of both the _sidebar_ and _main_ `<div>`, while _sidebar_ and _main_ are siblings.  Notice the indentation - this is extremely important as it clearly and visually spells out these hierarchical relationship.  Indentation and relationships of tags (and code blocks) are the things newcomers struggle with the most! Be vigilant here!
+Above, you'll see this pattern often - notice that we have one `<div>` tag with an attribute `id='content'`, and inside this tag, we have two other `<div>` tags, one for a sidebar and one for a main section of the page. The _content_ `<div>` is the parent of both the _sidebar_ and _main_ `<div>`, while _sidebar_ and _main_ are siblings.  Notice the indentation - this is extremely important as it clearly and visually spells out these hierarchical relationships.
+
+Indentation and relationships of tags (and code blocks) are the things newcomers struggle with the most! Be vigilant here!
 
 ## Lesson Steps
 
@@ -208,15 +210,15 @@ Above, you'll see this pattern often - notice that we have one `<div>` tag with 
 
 Right-click in the file system and select `New File`
 
-<img src="https://raw.githubusercontent.com/OperationSpark/first-website/master/img/create-new-file.png">
+<img src="https://raw.githubusercontent.com/OperationSpark/first-website/master/img/create-new-file.png" height='400px'>
 
 Name the file, `index.html`, (press return after naming it to save the new name) like so:
 
-<img src="https://raw.githubusercontent.com/OperationSpark/first-website/master/img/name-it-index.png">
+<img src="https://raw.githubusercontent.com/OperationSpark/first-website/master/img/name-it-index.png" height='300px'>
 
 Next, double click the `index.html` file to open it so we can begin editing the file, like so:
 
-<img src="https://raw.githubusercontent.com/OperationSpark/first-website/master/img/open-index-html.png">
+<img src="https://raw.githubusercontent.com/OperationSpark/first-website/master/img/open-index-html.png" height='300px'>
 
 Ok great!  We've created our `index.html` file and opened it in the text editor to start developing our website!
 
