@@ -483,23 +483,25 @@ Copy the entire below section and place it inside the `<head>` below the `<title
 
 Ok, we've pasted-in a bunch of style rules between the `<style></style>` tag, and if we save your work and reload your website, you should see that your page is now styled with some colors and some positioning.
 
-#### CSS Selectors in a Nutshell
+#### CSS in a Nutshell
 
 CSS allows us to specify styling rules for our HTML elements.  When we say _elements_, we're talking about all the HTML tags within a webpage.  In best practice, we separate the content of an HTML document from the style or presentation of the content.  This allows us to change appearence without modifying content, allows styles to be better managed across multiple pages, and creates a cleaner code base.
 
+First, in order to style HTML elements, we need a way to select the elements.
+
 #### Selecting HTML Elements by Tag Type
 
-**Selectors** and their **styling rules** tell the web browser which elements to select, and how to style them. Suppose we want all text in `<p>` tags to be blue? Or, we want `<nav>` to have a border? First we need to specifically _select_ those elements. 
+**Selectors** and their **styling rules** tell the web browser which elements to select, and how to style them. Suppose we want all text in `<p>` tags to be blue? Or, we want all `<div>` tags to have a border? First we need to specifically _select_ those elements. 
 
 ```CSS
-p {
-  color: blue;
+div {
+  border: 1px solid black;
 }
 ```
 
-The above CSS uses the **CSS Selector** `p` to create a style rule for all `<p>` tags. The rule states that all elements with the tag `p` will have blue text. Selecting an element by its tag type will style all tags of that type. 
+The above CSS uses the **CSS Selector** `div` to create a style rule for all `<div>` tags. The rule states that all elements with the tag `div` will have a solid black border that is 1 pixel thick. NOTE: Selecting an element by its tag type will style _all__ tags of that type. 
 
-#### Selecting HTML Elements by ID, Class, or by 
+#### Selecting HTML Elements by ID or Class
 
 When we create HTML elements, we can assign them an id or a class. In our HTML so far, we've given one element an id of _all-contents_ and another a class of _sidebar_. We did this by using the id and class attributes of the `<div>`. For example:
 
@@ -508,17 +510,10 @@ When we create HTML elements, we can assign them an id or a class. In our HTML s
     <div class="sidebar"></div>
 </div>
 ````
-id and class are useful for labeling elements but they also allow us to be specific with styling based on these labels. By more specifically describing HTML elements with id or class, we can then select those elements by their id or class, and style them the way we like, and for this reason, the rules we specify in CSS are called _selectors_. We can also select elements by their tag type, as in, `body`, `p`, `h1`, `nav`.
 
-  In a moment, we are going to add some more style to our `<nav>` element, and by doing so using the `nav` selector, we are creating a style rule that will be applied to _all nav tags_ on our webpage.
+id and class are useful for labeling elements but they also allow us to be specific with styling based on these labels. By more specifically describing HTML elements with id or class, we can then style only those elements that have a particular id or class.
 
-`id`s are unique and selecting an element by id should only return one element, if your web page is well formatted, so applying a style rule by id should only style one element on the page.
-
-Selecting an element by its tag type or by its class will style all tags of that type, or all tags of that class.
-
-To style all elements that share the same tag we simply provide the name of the tag
-
-When we want to style an element with a unique `id` we use the CSS selector However, the same selector can be spelled using the number symbol `#`, for id, like this:
+To style an element with a unique `id` we use the CSS selector format `#id-name`. So, if we wanted to style the `<div>` tag with `id="all-contents"` we would use the CSS selector `#all-contents`:
 
 ````CSS
 #all-contents {
@@ -527,7 +522,9 @@ When we want to style an element with a unique `id` we use the CSS selector Howe
 }
 ````
 
-The short form to specify a CSS selector by class is the dot `.`, as in:
+`id`s are unique and selecting an element by id should only return one element, if your web page is well formatted, so applying a style rule by id should only style one element on the page.
+
+To style all elements that share the same `class` attribute we use the CSS selector format `.class-name`. So, if we wanted to style all tags with `class="sidebar"` we would use the CSS selector `.sidebar`: 
 
 ````CSS
 .sidebar {
@@ -536,20 +533,9 @@ The short form to specify a CSS selector by class is the dot `.`, as in:
 }
 ````
 
-The long form of sidebar class selector is:
+Note: Selecting an element by its class will style all tags that class.
 
-````CSS
-[class=sidebar] {
-    margin-right: 25px;
-    padding: 10px;
-}
-````
-
-|Type  | Long form                      | Short form            | 
-|------| ------------------------------ |-----------------------|
-|class | [class=all-contents] { ... }   | .all-contents { ... } |
-|id    | [id=portfolio] { ... }         | #portfolio { ... }    |
-
+[Check out more CSS style rules here](https://www.w3schools.com/cssref/)
 
 ### TODO 12 : Play around with the CSS
 
